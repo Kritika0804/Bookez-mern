@@ -28,7 +28,7 @@ h1{
 }
 
 .btn{
-  background-color: black !important;
+  background-color: black ;
   color: white;
   box-shadow: none;
 }
@@ -65,4 +65,18 @@ h2{
   padding: 10px;
   font-weight: bold;
   text-align: center;
+}
+
+.landing{
+  background-color: #000;
+  height:100vh;
+  padding-top: 10px;
+}
+
+.landingbtn{
+  margin-top: 20px;
+}
+
+.landing .col-md-9{
+  border-right: 8px solid white;
 }

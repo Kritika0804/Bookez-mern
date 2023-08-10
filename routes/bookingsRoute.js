@@ -12,19 +12,6 @@ router.post("/bookroom", async (req, res) => {
   const { room, userid, fromDate, toDate, totalamount, totaldays, token } =
     req.body;
 
-  // stripe.customers
-  //   .create({
-  //     email: req.body.stripeEmail,
-  //     source: req.body.stripeToken,
-  //   })
-  //   .then((customer) =>
-  //     stripe.paymentIntents.create({
-  //       totalamount,
-  //       currency: "inr",
-  //       customer: customer.id,
-  //     })
-  //   )
-  //   .then((charge) => res.render("success"));
 
   try {
     const customer = await stripe.customers.create({
@@ -38,11 +25,13 @@ router.post("/bookroom", async (req, res) => {
         currency: "inr",
         receipt_email: token.email,
       },
-      
+      {
+        idempotencyKey: uuidv4(),
+      }
     );
-
-    if (payment) {
-      try {
+      console.log(payment?true:false)
+    // if (true) {
+     
         // create model
         const newbooking = new Booking({
           room: room.name,
@@ -73,11 +62,8 @@ router.post("/bookroom", async (req, res) => {
         await roomtemp.save();
 
         res.send("Room booked successfully");
-      } catch (error) {
-        return res.status(400).json({ error });
-      }
-    }
-
+      
+    // }
     res.send("Payment Successfully , Your room is booked");
   } catch (error) {
     res.status(400).json({ error });

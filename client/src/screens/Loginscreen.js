@@ -23,7 +23,7 @@ function Loginscreen() {
       console.log(result);
       // store user in local storage in order to access anywhere in the application
       // Note : we cant store va;ues of object and arrays so we have to convert in string
-      
+
       localStorage.setItem("currentUser", JSON.stringify(result));
       const resultString = localStorage.getItem("currentUser");
       console.log(resultString);
@@ -33,7 +33,7 @@ function Loginscreen() {
     } catch (error) {
       setloading(false);
       // console.log(error);
-      
+
       seterror(true);
     }
     // console.log(user);
@@ -49,6 +49,7 @@ function Loginscreen() {
 
             <input
               type="text"
+              style={{ margin: "5px" }}
               className="form-control"
               placeholder="email"
               value={email}
@@ -58,6 +59,7 @@ function Loginscreen() {
             />
             <input
               type="password"
+              style={{ margin: "5px" }}
               className="form-control"
               placeholder="password"
               value={password}

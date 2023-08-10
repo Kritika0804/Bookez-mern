@@ -60,9 +60,13 @@ function Bookingscreen() {
       const result = await axios.post("/api/bookings/bookroom", bookingDetails);
       setloading(false);
       Swal.fire("Congratulations", "Your Room Booked Successfully", "success");
-    } catch (error) {}
-    setloading(false);
-    Swal.fire("Sorry", "Something went wrong", "error");
+    } catch (error) {
+      setloading(false);
+      Swal.fire("Sorry", "Something went wrong", "error");
+      console.log(error);
+    }
+
+    // Swal.fire("Congratulations", "Your Room Booked Successfully", "success");
   }
 
   return (

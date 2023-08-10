@@ -52,13 +52,14 @@ function Registerscreen() {
       {loading && <Loading />}
       {error && <Error message="not registered" />}
 
-      <div className="row justify-content-center mt-5">
+      <div className="row justify-content-center mt-5 ">
         <div className="col-md-5 mt-5">
           {success && <Success message="Registeration Success" />}
           <div className="bs">
             <h2>Register</h2>
             <input
               type="text"
+              style={{ margin: "5px" }}
               className="form-control"
               placeholder="name"
               value={name}
@@ -68,6 +69,7 @@ function Registerscreen() {
             />
             <input
               type="text"
+              style={{ margin: "5px" }}
               className="form-control"
               placeholder="email"
               value={email}
@@ -77,6 +79,7 @@ function Registerscreen() {
             />
             <input
               type="password"
+              style={{ margin: "5px" }}
               className="form-control"
               placeholder="password"
               value={password}
@@ -86,6 +89,7 @@ function Registerscreen() {
             />
             <input
               type="password"
+              style={{ margin: "5px" }}
               className="form-control"
               placeholder="cpassword"
               value={cpassword}
@@ -93,7 +97,10 @@ function Registerscreen() {
                 setcpassword(e.target.value);
               }}
             />
-            <button className="btn btn-primary mt-3" onClick={register}>
+            <button
+              className="btn btn-primary mt-3 align-item-center"
+              onClick={register}
+            >
               Register
             </button>
           </div>
