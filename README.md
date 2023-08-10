@@ -50,3 +50,11 @@ The Stripe integration supports various payment methods, enhancing user convenie
 Responsive Design: 
 The website features a responsive design that adapts seamlessly to various devices, including desktops, tablets, and smartphones. 
 This responsiveness ensures that users can easily access and navigate the platform from their preferred device, enhancing accessibility and usability.
+
+## Application Images:
+
+<img src="images/Screenshot (178).png" width="500" height="300">   <img src="images/Screenshot (179).png" width="500" height="300"> 
+<img src="images/Screenshot (180).png" width="500" height="300">   <img src="images/Screenshot (181).png" width="500" height="300"> 
+<img src="images/Screenshot (182).png" width="500" height="300">   <img src="images/Screenshot (183).png" width="500" height="300"> 
+<img src="images/Screenshot (184).png" width="500" height="300">   
+
